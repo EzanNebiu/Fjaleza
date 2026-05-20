@@ -1,0 +1,38 @@
+import { describe, it } from 'vitest';
+import { tokenizeAlbanian, tokensToString } from '../core/tokenizer';
+import { getAllowedWords, isAllowedWord } from '../data/wordRepository';
+import { VALID_ALLOWED_WORDS } from '../data/words';
+
+describe('Tokenizer Debug', () => {
+  it('should properly tokenize and validate common words', () => {
+    const validWordsSet = getAllowedWords();
+    
+    console.log('\n=== Word Validation Debug ===');
+    console.log(`Valid words set size: ${validWordsSet.size}`);
+    console.log(`VALID_ALLOWED_WORDS length: ${VALID_ALLOWED_WORDS.length}`);
+    console.log(`First 10 words in set:`, Array.from(validWordsSet).slice(0, 10));
+    
+    // Test some simple words
+    const testWords = ['LIBËR', 'KLASË', 'DHOMA', 'MIRË', 'TOKË', 'GURËT', 'SHQIP'];
+    
+    console.log('\n=== Testing Common Words ===');
+    testWords.forEach(word => {
+      const tokens = tokenizeAlbanian(word, validWordsSet);
+      const reconstructed = tokensToString(tokens);
+      const isValid = isAllowedWord(word);
+      const inSet = validWordsSet.has(word);
+      
+      console.log(`\nWord: ${word}`);
+      console.log(`  Tokens: [${tokens.join(', ')}] (${tokens.length} tokens)`);
+      console.log(`  Reconstructed: ${reconstructed}`);
+      console.log(`  isAllowedWord(): ${isValid}`);
+      console.log(`  In validWordsSet: ${inSet}`);
+      console.log(`  Match: ${word === reconstructed ? '✅' : '❌'}`);
+    });
+    
+    // Check if any words at all are valid
+    const validCount = VALID_ALLOWED_WORDS.filter(w => isAllowedWord(w)).length;
+    console.log(`\n=== Summary ===`);
+    console.log(`Valid words that pass isAllowedWord: ${validCount}/${VALID_ALLOWED_WORDS.length}`);
+  });
+});

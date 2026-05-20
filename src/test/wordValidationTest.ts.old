@@ -1,0 +1,38 @@
+/**
+ * Test word validation and character counting
+ * Run this in the browser console to verify everything works
+ */
+
+import { normalizeWord, getWordLength, isFiveLetterWord } from './utils/wordValidation';
+
+// Test normalization
+console.log('=== Normalization Tests ===');
+console.log('normalizeWord("Folja"):', normalizeWord("Folja")); // should be "folja"
+console.log('normalizeWord(" folja "):', normalizeWord(" folja ")); // should be "folja"
+console.log('normalizeWord("SHOKU"):', normalizeWord("SHOKU")); // should be "shoku"
+
+// Test character length counting
+console.log('\n=== Character Length Tests ===');
+console.log('getWordLength("folja"):', getWordLength("folja")); // should be 5
+console.log('getWordLength("shoku"):', getWordLength("shoku")); // should be 5
+console.log('getWordLength("çelës"):', getWordLength("çelës")); // should be 5
+console.log('getWordLength("ëndër"):', getWordLength("ëndër")); // should be 5
+console.log('getWordLength("drita"):', getWordLength("drita")); // should be 5
+console.log('getWordLength("zemra"):', getWordLength("zemra")); // should be 5
+
+// Test 5-letter validation
+console.log('\n=== 5-Letter Validation Tests ===');
+console.log('isFiveLetterWord("folja"):', isFiveLetterWord("folja")); // should be true
+console.log('isFiveLetterWord("shoku"):', isFiveLetterWord("shoku")); // should be true
+console.log('isFiveLetterWord("çelës"):', isFiveLetterWord("çelës")); // should be true
+console.log('isFiveLetterWord("ëndër"):', isFiveLetterWord("ëndër")); // should be true
+console.log('isFiveLetterWord("drita"):', isFiveLetterWord("drita")); // should be true
+console.log('isFiveLetterWord("zemra"):', isFiveLetterWord("zemra")); // should be true
+
+console.log('\n=== Invalid Word Tests ===');
+console.log('isFiveLetterWord("ab"):', isFiveLetterWord("ab")); // should be false (too short)
+console.log('isFiveLetterWord("shqiptare"):', isFiveLetterWord("shqiptare")); // should be false (too long)
+console.log('isFiveLetterWord("mirë-dita"):', isFiveLetterWord("mirë-dita")); // should be false (has hyphen)
+console.log('isFiveLetterWord("test1"):', isFiveLetterWord("test1")); // should be false (has number)
+
+console.log('\n=== All tests completed ===');

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-hacker-border;
+  }
+
+  body {
+    @apply bg-hacker-bg text-hacker-text antialiased;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+  }
+
+  #root {
+    @apply min-h-dvh flex flex-col;
+  }
+}
+
+@layer utilities {
+  .reduced-motion {
+    animation: none !important;
+    transition: none !important;
+  }
+}
