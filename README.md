@@ -2,7 +2,7 @@
 
 A daily Albanian word game: guess the 5-letter word in 6 tries. It's a static site with no backend, it works offline after the first visit, and it's free to host on Netlify or Cloudflare Pages.
 
-Made by ELITA Group: [Ezan Nebija](https://ezannebija.dev/), Edi Nebiu, Redon Cikaj, Anila Kadriaj and Rina Gashi.
+Made by [Ezan Nebija](https://ezannebija.dev/).
 
 ## Run it
 

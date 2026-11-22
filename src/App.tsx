@@ -194,9 +194,17 @@ export default function App() {
       </div>
 
       <footer className="footer">
-        <span>Fjalëza, loja shqipe e fjalëve</span>
-        <a href="/rreth/">Rreth lojës</a>
-        <a href="/privatesia/">Privatësia</a>
+        <p className="footer-credit">
+          Krijuar nga{' '}
+          <a href="https://ezannebija.dev/" rel="author">
+            Ezan Nebija
+          </a>
+        </p>
+        <nav className="footer-links" aria-label="Lidhje">
+          <a href="/rreth/">Rreth lojës</a>
+          <a href="/privatesia/">Privatësia</a>
+          <a href="https://ezannebija.dev/">ezannebija.dev</a>
+        </nav>
       </footer>
 
       <Toasts toasts={toasts} announcement={announcement} />
