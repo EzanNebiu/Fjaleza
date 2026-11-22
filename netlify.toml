@@ -1,0 +1,14 @@
+# Netlify build settings. Security headers and caching rules are generated into
+# dist/_headers at build time (see vite.config.ts), which Netlify applies.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Unknown paths show the 404 page instead of the game.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
