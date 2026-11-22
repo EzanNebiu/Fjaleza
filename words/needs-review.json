@@ -1,0 +1,976 @@
+{
+  "note": "Words kept out of the answer list until a human checks them. To promote one, add it to \"approve\" in words/review-decisions.json and rerun npm run words:build.",
+  "count": 178,
+  "words": [
+    {
+      "word": "asnjë",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 6558
+    },
+    {
+      "word": "shume",
+      "reason": "diacritic variant \"shumë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 5099,
+      "variant": "shumë",
+      "variantFrequency": 55614
+    },
+    {
+      "word": "dreqi",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 2715
+    },
+    {
+      "word": "zotit",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 2075
+    },
+    {
+      "word": "tamam",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 1447
+    },
+    {
+      "word": "gjesh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 1432
+    },
+    {
+      "word": "sipas",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 1413
+    },
+    {
+      "word": "duash",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 1392
+    },
+    {
+      "word": "armën",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 1309
+    },
+    {
+      "word": "armët",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 1052
+    },
+    {
+      "word": "tende",
+      "reason": "diacritic variant \"tënde\" is much more frequent; frequency may come from misspellings",
+      "frequency": 1046,
+      "variant": "tënde",
+      "variantFrequency": 9999
+    },
+    {
+      "word": "seksi",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 978
+    },
+    {
+      "word": "dikur",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 976
+    },
+    {
+      "word": "goxha",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 974
+    },
+    {
+      "word": "zotin",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 925
+    },
+    {
+      "word": "mbash",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 922
+    },
+    {
+      "word": "aspak",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 893
+    },
+    {
+      "word": "krejt",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 848
+    },
+    {
+      "word": "ndyrë",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 847
+    },
+    {
+      "word": "perse",
+      "reason": "diacritic variant \"përse\" is much more frequent; frequency may come from misspellings",
+      "frequency": 807,
+      "variant": "përse",
+      "variantFrequency": 5802
+    },
+    {
+      "word": "super",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 752
+    },
+    {
+      "word": "ikësh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 751
+    },
+    {
+      "word": "marre",
+      "reason": "diacritic variant \"marrë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 745,
+      "variant": "marrë",
+      "variantFrequency": 9300
+    },
+    {
+      "word": "rrish",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 704
+    },
+    {
+      "word": "midis",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 699
+    },
+    {
+      "word": "kurse",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 697
+    },
+    {
+      "word": "gjera",
+      "reason": "diacritic variant \"gjëra\" is much more frequent; frequency may come from misspellings",
+      "frequency": 669,
+      "variant": "gjëra",
+      "variantFrequency": 5736
+    },
+    {
+      "word": "vrave",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 663
+    },
+    {
+      "word": "rehat",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 640
+    },
+    {
+      "word": "paska",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 594
+    },
+    {
+      "word": "paske",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 594
+    },
+    {
+      "word": "gjeja",
+      "reason": "diacritic variant \"gjëja\" is much more frequent; frequency may come from misspellings",
+      "frequency": 587,
+      "variant": "gjëja",
+      "variantFrequency": 1835
+    },
+    {
+      "word": "qenke",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 586
+    },
+    {
+      "word": "vajze",
+      "reason": "diacritic variant \"vajzë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 547,
+      "variant": "vajzë",
+      "variantFrequency": 3310
+    },
+    {
+      "word": "mbanë",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 543
+    },
+    {
+      "word": "gjate",
+      "reason": "diacritic variant \"gjatë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 533,
+      "variant": "gjatë",
+      "variantFrequency": 5790
+    },
+    {
+      "word": "drogë",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 531
+    },
+    {
+      "word": "vranë",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 528
+    },
+    {
+      "word": "rruge",
+      "reason": "diacritic variant \"rrugë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 526,
+      "variant": "rrugë",
+      "variantFrequency": 2600
+    },
+    {
+      "word": "behet",
+      "reason": "diacritic variant \"bëhet\" is much more frequent; frequency may come from misspellings",
+      "frequency": 521,
+      "variant": "bëhet",
+      "variantFrequency": 4899
+    },
+    {
+      "word": "flesh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 485
+    },
+    {
+      "word": "xhiro",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 460
+    },
+    {
+      "word": "lufte",
+      "reason": "diacritic variant \"luftë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 457,
+      "variant": "luftë",
+      "variantFrequency": 1461
+    },
+    {
+      "word": "luash",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 451
+    },
+    {
+      "word": "banjo",
+      "reason": "legacy answer: not in the Hunspell sq_AL dictionary, but appears 409 times in subtitles (dialect or spelling variant?)",
+      "frequency": 409
+    },
+    {
+      "word": "ngaqë",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 396
+    },
+    {
+      "word": "frike",
+      "reason": "diacritic variant \"frikë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 362,
+      "variant": "frikë",
+      "variantFrequency": 3036
+    },
+    {
+      "word": "qofte",
+      "reason": "diacritic variant \"qoftë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 332,
+      "variant": "qoftë",
+      "variantFrequency": 2094
+    },
+    {
+      "word": "vrare",
+      "reason": "diacritic variant \"vrarë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 328,
+      "variant": "vrarë",
+      "variantFrequency": 3012
+    },
+    {
+      "word": "veçse",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 311
+    },
+    {
+      "word": "shpif",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 303
+    },
+    {
+      "word": "fjale",
+      "reason": "diacritic variant \"fjalë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 299,
+      "variant": "fjalë",
+      "variantFrequency": 2811
+    },
+    {
+      "word": "pjese",
+      "reason": "diacritic variant \"pjesë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 296,
+      "variant": "pjesë",
+      "variantFrequency": 3003
+    },
+    {
+      "word": "kinez",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 296
+    },
+    {
+      "word": "ngase",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 293
+    },
+    {
+      "word": "droge",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 286
+    },
+    {
+      "word": "lehte",
+      "reason": "diacritic variant \"lehtë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 281,
+      "variant": "lehtë",
+      "variantFrequency": 2528
+    },
+    {
+      "word": "teksa",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 280
+    },
+    {
+      "word": "zonje",
+      "reason": "diacritic variant \"zonjë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 277,
+      "variant": "zonjë",
+      "variantFrequency": 1848
+    },
+    {
+      "word": "zotat",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 277
+    },
+    {
+      "word": "blesh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 268
+    },
+    {
+      "word": "pashe",
+      "reason": "diacritic variant \"pashë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 266,
+      "variant": "pashë",
+      "variantFrequency": 2750
+    },
+    {
+      "word": "tille",
+      "reason": "diacritic variant \"tillë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 256,
+      "variant": "tillë",
+      "variantFrequency": 3056
+    },
+    {
+      "word": "kohen",
+      "reason": "diacritic variant \"kohën\" is much more frequent; frequency may come from misspellings",
+      "frequency": 255,
+      "variant": "kohën",
+      "variantFrequency": 1772
+    },
+    {
+      "word": "ecësh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 255
+    },
+    {
+      "word": "nejse",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 254
+    },
+    {
+      "word": "imzot",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 248
+    },
+    {
+      "word": "robin",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 247
+    },
+    {
+      "word": "dhome",
+      "reason": "diacritic variant \"dhomë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 238,
+      "variant": "dhomë",
+      "variantFrequency": 1432
+    },
+    {
+      "word": "forte",
+      "reason": "diacritic variant \"fortë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 237,
+      "variant": "fortë",
+      "variantFrequency": 2562
+    },
+    {
+      "word": "orësh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 235
+    },
+    {
+      "word": "uiski",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 232
+    },
+    {
+      "word": "larte",
+      "reason": "diacritic variant \"lartë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 219,
+      "variant": "lartë",
+      "variantFrequency": 2314
+    },
+    {
+      "word": "avash",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 219
+    },
+    {
+      "word": "rusët",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 210
+    },
+    {
+      "word": "qarte",
+      "reason": "diacritic variant \"qartë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 208,
+      "variant": "qartë",
+      "variantFrequency": 1701
+    },
+    {
+      "word": "kuçkë",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 205
+    },
+    {
+      "word": "spiun",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 202
+    },
+    {
+      "word": "herri",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 200
+    },
+    {
+      "word": "turne",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 200
+    },
+    {
+      "word": "lordi",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 199
+    },
+    {
+      "word": "qëkur",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 199
+    },
+    {
+      "word": "debil",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 196
+    },
+    {
+      "word": "andaj",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 195
+    },
+    {
+      "word": "kater",
+      "reason": "diacritic variant \"katër\" is much more frequent; frequency may come from misspellings",
+      "frequency": 184,
+      "variant": "katër",
+      "variantFrequency": 2168
+    },
+    {
+      "word": "neper",
+      "reason": "diacritic variant \"nëpër\" is much more frequent; frequency may come from misspellings",
+      "frequency": 181,
+      "variant": "nëpër",
+      "variantFrequency": 1857
+    },
+    {
+      "word": "sakte",
+      "reason": "diacritic variant \"saktë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 181,
+      "variant": "saktë",
+      "variantFrequency": 1868
+    },
+    {
+      "word": "laura",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 178
+    },
+    {
+      "word": "harri",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 178
+    },
+    {
+      "word": "krimi",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 177
+    },
+    {
+      "word": "biesh",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 175
+    },
+    {
+      "word": "demon",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 173
+    },
+    {
+      "word": "allen",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 171
+    },
+    {
+      "word": "armen",
+      "reason": "diacritic variant \"armën\" is much more frequent; frequency may come from misspellings",
+      "frequency": 169,
+      "variant": "armën",
+      "variantFrequency": 1309
+    },
+    {
+      "word": "boten",
+      "reason": "diacritic variant \"botën\" is much more frequent; frequency may come from misspellings",
+      "frequency": 164,
+      "variant": "botën",
+      "variantFrequency": 1586
+    },
+    {
+      "word": "lojra",
+      "reason": "legacy answer: not in the Hunspell sq_AL dictionary, but appears 160 times in subtitles (dialect or spelling variant?)",
+      "frequency": 160
+    },
+    {
+      "word": "armiq",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 158
+    },
+    {
+      "word": "brekë",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 156
+    },
+    {
+      "word": "darke",
+      "reason": "diacritic variant \"darkë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 153,
+      "variant": "darkë",
+      "variantFrequency": 1022
+    },
+    {
+      "word": "xheku",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 152
+    },
+    {
+      "word": "pallë",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 152
+    },
+    {
+      "word": "fryme",
+      "reason": "diacritic variant \"frymë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 150,
+      "variant": "frymë",
+      "variantFrequency": 1228
+    },
+    {
+      "word": "bingo",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 148
+    },
+    {
+      "word": "droga",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 146
+    },
+    {
+      "word": "vrase",
+      "reason": "diacritic variant \"vrasë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 144,
+      "variant": "vrasë",
+      "variantFrequency": 872
+    },
+    {
+      "word": "xhuli",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 141
+    },
+    {
+      "word": "thane",
+      "reason": "diacritic variant \"thanë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 139,
+      "variant": "thanë",
+      "variantFrequency": 952
+    },
+    {
+      "word": "krime",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 137
+    },
+    {
+      "word": "shpie",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 135
+    },
+    {
+      "word": "delta",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 134
+    },
+    {
+      "word": "radhe",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 132
+    },
+    {
+      "word": "total",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 132
+    },
+    {
+      "word": "helen",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 129
+    },
+    {
+      "word": "gënje",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 129
+    },
+    {
+      "word": "berri",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 128
+    },
+    {
+      "word": "kumar",
+      "reason": "manual review: sensitive topic (drugs, alcohol, gambling, weapons, killing, crime)",
+      "frequency": 123
+    },
+    {
+      "word": "drite",
+      "reason": "diacritic variant \"dritë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 122,
+      "variant": "dritë",
+      "variantFrequency": 510
+    },
+    {
+      "word": "prape",
+      "reason": "diacritic variant \"prapë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 121,
+      "variant": "prapë",
+      "variantFrequency": 1648
+    },
+    {
+      "word": "paçim",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 121
+    },
+    {
+      "word": "trapa",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 120
+    },
+    {
+      "word": "grand",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 120
+    },
+    {
+      "word": "botes",
+      "reason": "diacritic variant \"botës\" is much more frequent; frequency may come from misspellings",
+      "frequency": 119,
+      "variant": "botës",
+      "variantFrequency": 1198
+    },
+    {
+      "word": "zemre",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 119
+    },
+    {
+      "word": "there",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 119
+    },
+    {
+      "word": "kurdo",
+      "reason": "manual review: function word (conjunction, preposition, pronoun, adverb)",
+      "frequency": 117
+    },
+    {
+      "word": "feste",
+      "reason": "diacritic variant \"festë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 116,
+      "variant": "festë",
+      "variantFrequency": 914
+    },
+    {
+      "word": "ndyra",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 116
+    },
+    {
+      "word": "quash",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 115
+    },
+    {
+      "word": "qeras",
+      "reason": "manual review: dialect, colloquial or non-standard form",
+      "frequency": 112
+    },
+    {
+      "word": "çifut",
+      "reason": "manual review: offensive, vulgar or a slur",
+      "frequency": 111
+    },
+    {
+      "word": "force",
+      "reason": "diacritic variant \"forcë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 108,
+      "variant": "forcë",
+      "variantFrequency": 475
+    },
+    {
+      "word": "marta",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 108
+    },
+    {
+      "word": "greke",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 106
+    },
+    {
+      "word": "marko",
+      "reason": "manual review: looks like a personal name or proper noun",
+      "frequency": 103
+    },
+    {
+      "word": "banke",
+      "reason": "diacritic variant \"bankë\" is much more frequent; frequency may come from misspellings",
+      "frequency": 101,
+      "variant": "bankë",
+      "variantFrequency": 316
+    },
+    {
+      "word": "hebre",
+      "reason": "manual review: religious, ethnic or national term; avoid as a daily answer",
+      "frequency": 101
+    },
+    {
+      "word": "ruash",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 101
+    },
+    {
+      "word": "final",
+      "reason": "manual review: foreign word or English contamination",
+      "frequency": 100
+    },
+    {
+      "word": "ulësh",
+      "reason": "manual review: awkward subjunctive form, unlikely to be guessed",
+      "frequency": 100
+    },
+    {
+      "word": "halli",
+      "reason": "legacy answer: real word but only 98 subtitle occurrences (below 100)",
+      "frequency": 98
+    },
+    {
+      "word": "bisht",
+      "reason": "legacy answer: real word but only 96 subtitle occurrences (below 100)",
+      "frequency": 96
+    },
+    {
+      "word": "pesha",
+      "reason": "legacy answer: real word but only 95 subtitle occurrences (below 100)",
+      "frequency": 95
+    },
+    {
+      "word": "gropa",
+      "reason": "legacy answer: real word but only 94 subtitle occurrences (below 100)",
+      "frequency": 94
+    },
+    {
+      "word": "imazh",
+      "reason": "legacy answer: real word but only 85 subtitle occurrences (below 100)",
+      "frequency": 85
+    },
+    {
+      "word": "lidhi",
+      "reason": "legacy answer: real word but only 85 subtitle occurrences (below 100)",
+      "frequency": 85
+    },
+    {
+      "word": "mbesa",
+      "reason": "legacy answer: real word but only 84 subtitle occurrences (below 100)",
+      "frequency": 84
+    },
+    {
+      "word": "mikja",
+      "reason": "legacy answer: real word but only 84 subtitle occurrences (below 100)",
+      "frequency": 84
+    },
+    {
+      "word": "nusja",
+      "reason": "legacy answer: real word but only 84 subtitle occurrences (below 100)",
+      "frequency": 84
+    },
+    {
+      "word": "çizme",
+      "reason": "legacy answer: real word but only 82 subtitle occurrences (below 100)",
+      "frequency": 82
+    },
+    {
+      "word": "helmi",
+      "reason": "legacy answer: real word but only 80 subtitle occurrences (below 100)",
+      "frequency": 80
+    },
+    {
+      "word": "palla",
+      "reason": "legacy answer: real word but only 75 subtitle occurrences (below 100)",
+      "frequency": 75
+    },
+    {
+      "word": "kodra",
+      "reason": "legacy answer: real word but only 72 subtitle occurrences (below 100)",
+      "frequency": 72
+    },
+    {
+      "word": "molla",
+      "reason": "legacy answer: real word but only 72 subtitle occurrences (below 100)",
+      "frequency": 72
+    },
+    {
+      "word": "panda",
+      "reason": "legacy answer: real word but only 72 subtitle occurrences (below 100)",
+      "frequency": 72
+    },
+    {
+      "word": "bujar",
+      "reason": "legacy answer: real word but only 70 subtitle occurrences (below 100)",
+      "frequency": 70
+    },
+    {
+      "word": "dimri",
+      "reason": "legacy answer: real word but only 67 subtitle occurrences (below 100)",
+      "frequency": 67
+    },
+    {
+      "word": "limon",
+      "reason": "legacy answer: real word but only 60 subtitle occurrences (below 100)",
+      "frequency": 60
+    },
+    {
+      "word": "brezi",
+      "reason": "legacy answer: real word but only 56 subtitle occurrences (below 100)",
+      "frequency": 56
+    },
+    {
+      "word": "plaka",
+      "reason": "legacy answer: real word but only 55 subtitle occurrences (below 100)",
+      "frequency": 55
+    },
+    {
+      "word": "kapak",
+      "reason": "legacy answer: real word but only 50 subtitle occurrences (below 100)",
+      "frequency": 50
+    },
+    {
+      "word": "inati",
+      "reason": "legacy answer: real word but only 49 subtitle occurrences (below 100)",
+      "frequency": 49
+    },
+    {
+      "word": "ethet",
+      "reason": "legacy answer: real word but only 47 subtitle occurrences (below 100)",
+      "frequency": 47
+    },
+    {
+      "word": "kryqi",
+      "reason": "legacy answer: real word but only 46 subtitle occurrences (below 100)",
+      "frequency": 46
+    },
+    {
+      "word": "hidra",
+      "reason": "legacy answer: real word but only 45 subtitle occurrences (below 100)",
+      "frequency": 45
+    },
+    {
+      "word": "hijet",
+      "reason": "legacy answer: real word but only 45 subtitle occurrences (below 100)",
+      "frequency": 45
+    },
+    {
+      "word": "orizi",
+      "reason": "legacy answer: real word but only 39 subtitle occurrences (below 100)",
+      "frequency": 39
+    },
+    {
+      "word": "grada",
+      "reason": "legacy answer: real word but only 37 subtitle occurrences (below 100)",
+      "frequency": 37
+    },
+    {
+      "word": "muzik",
+      "reason": "legacy answer: not in the Hunspell sq_AL dictionary, but appears 37 times in subtitles (dialect or spelling variant?)",
+      "frequency": 37
+    },
+    {
+      "word": "fondi",
+      "reason": "legacy answer: real word but only 35 subtitle occurrences (below 100)",
+      "frequency": 35
+    },
+    {
+      "word": "kamer",
+      "reason": "legacy answer: not in the Hunspell sq_AL dictionary, but appears 35 times in subtitles (dialect or spelling variant?)",
+      "frequency": 35
+    },
+    {
+      "word": "lagja",
+      "reason": "legacy answer: real word but only 35 subtitle occurrences (below 100)",
+      "frequency": 35
+    },
+    {
+      "word": "ndeja",
+      "reason": "legacy answer: real word but only 35 subtitle occurrences (below 100)",
+      "frequency": 35
+    },
+    {
+      "word": "pirun",
+      "reason": "legacy answer: real word but only 35 subtitle occurrences (below 100)",
+      "frequency": 35
+    },
+    {
+      "word": "ftoht",
+      "reason": "legacy answer: not in the Hunspell sq_AL dictionary, but appears 33 times in subtitles (dialect or spelling variant?)",
+      "frequency": 33
+    },
+    {
+      "word": "gripi",
+      "reason": "legacy answer: real word but only 32 subtitle occurrences (below 100)",
+      "frequency": 32
+    },
+    {
+      "word": "bebja",
+      "reason": "legacy answer: real word but only 31 subtitle occurrences (below 100)",
+      "frequency": 31
+    },
+    {
+      "word": "flaka",
+      "reason": "legacy answer: real word but only 31 subtitle occurrences (below 100)",
+      "frequency": 31
+    },
+    {
+      "word": "froni",
+      "reason": "legacy answer: real word but only 30 subtitle occurrences (below 100)",
+      "frequency": 30
+    }
+  ]
+}

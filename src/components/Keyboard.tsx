@@ -1,73 +1,60 @@
-/**
- * Keyboard Component
- * 
- * Virtual on-screen keyboard with Albanian layout
- * Shows only physical keys, not digraphs
- */
+import { memo } from 'react';
+import { CornerDownLeft, Delete } from 'lucide-react';
+import { KEYBOARD_ROWS } from '../game/constants';
+import type { TileState } from '../game/types';
 
-import { Key } from './Key';
-import { KEYBOARD_KEYS } from '../types';
-import type { KeyState, CellState } from '../types';
+const STATE_LABEL: Record<TileState, string> = {
+  correct: 'në vendin e duhur',
+  present: 'në fjalë',
+  absent: 'nuk është në fjalë',
+};
 
 interface KeyboardProps {
-  keyStates: Map<string, CellState>;
-  onKeyPress: (key: string) => void;
-  disabled?: boolean;
+  states: Map<string, TileState>;
+  onKey: (key: string) => void;
 }
 
-export function Keyboard({ keyStates, onKeyPress, disabled = false }: KeyboardProps) {
-  const getKeyState = (key: string): KeyState => {
-    // Try both uppercase and lowercase
-    const upperKey = key.toUpperCase();
-    const lowerKey = key.toLowerCase();
-    
-    const state = keyStates.get(upperKey) || keyStates.get(lowerKey);
-    
-    if (!state || state === 'empty' || state === 'pending') {
-      return 'unused';
-    }
-    
-    // Map CellState to KeyState
-    return state as KeyState;
-  };
-
-  const handleKeyPress = (key: string) => {
-    if (!disabled) {
-      onKeyPress(key);
-    }
-  };
-
+export const Keyboard = memo(function Keyboard({ states, onKey }: KeyboardProps) {
   return (
-    <div
-      className="mx-auto w-full max-w-[31rem] space-y-1.5 px-1 sm:space-y-2"
-      role="group"
-      aria-label="Virtual keyboard"
-    >
-      {KEYBOARD_KEYS.map((row, rowIndex) => (
-        <div
-          key={rowIndex}
-          className="flex w-full justify-center gap-1.5 sm:gap-2"
-          style={{
-            paddingInline:
-              rowIndex === 1
-                ? 'clamp(0.625rem, 4vw, 1.5rem)'
-                : rowIndex === 2
-                  ? 'clamp(0rem, 1.5vw, 0.75rem)'
-                  : undefined,
-          }}
-        >
-          {row.map((key) => (
-            <Key
-              key={key}
-              keyValue={key}
-              state={getKeyState(key)}
-              onClick={handleKeyPress}
-              wide={key === 'ENTER' || key === 'BACKSPACE'}
-              disabled={disabled}
-            />
-          ))}
+    <div className="keyboard" role="group" aria-label="Tastiera">
+      {KEYBOARD_ROWS.map((row, r) => (
+        <div className="kb-row" key={r}>
+          {row.map((key) => {
+            const special = key === 'enter' || key === 'backspace';
+            const state = special ? undefined : states.get(key);
+            const label =
+              key === 'enter'
+                ? 'Dërgo'
+                : key === 'backspace'
+                  ? 'Fshi shkronjën'
+                  : `${key.toLocaleUpperCase('sq')}${state ? `, ${STATE_LABEL[state]}` : ''}`;
+            return (
+              <button
+                key={key}
+                type="button"
+                className={special ? 'key wide' : 'key'}
+                data-state={state}
+                data-key={key}
+                aria-label={label}
+                onClick={(e) => {
+                  onKey(key);
+                  // A mouse or touch tap leaves focus on the key, and a later physical
+                  // Enter would press it again. Keep focus only for keyboard users.
+                  if (e.detail > 0) e.currentTarget.blur();
+                }}
+              >
+                {key === 'enter' ? (
+                  <CornerDownLeft aria-hidden="true" />
+                ) : key === 'backspace' ? (
+                  <Delete aria-hidden="true" />
+                ) : (
+                  key
+                )}
+              </button>
+            );
+          })}
         </div>
       ))}
     </div>
   );
-}
+});

@@ -1,226 +1,113 @@
-# Fjalëza 🇦🇱
+# Fjalëza
 
-**A daily Albanian word puzzle game** - Wordle but for Albanian language!
+A daily Albanian word game: guess the 5-letter word in 6 tries. It's a static site with no backend, it works offline after the first visit, and it's free to host on Netlify or Cloudflare Pages.
 
-Fjalëza is a production-ready word puzzle game that challenges players to guess a 5-letter Albanian word in 6 attempts. The game features intelligent Albanian language support with context-aware digraph tokenization (handling special characters like "dh", "gj", "ll", "nj", etc.), daily puzzles, practice mode, and comprehensive statistics tracking.
+Made by ELITA Group: [Ezan Nebija](https://ezannebija.dev/), Edi Nebiu, Redon Cikaj, Anila Kadriaj and Rina Gashi.
 
-## ✨ Features
+## Run it
 
-### 🎮 Game Modes
-- **Daily Mode**: One puzzle per day, same for everyone - compete with friends!
-- **Practice Mode**: Unlimited random words to practice your Albanian vocabulary
-- **Hard Mode**: Must use revealed hints in subsequent guesses (can be toggled mid-game)
-
-### 🔤 Albanian Language Support
-- Context-aware tokenization for Albanian digraphs (dh, gj, ll, nj, rr, sh, th, xh, zh, ç, ë)
-- Handles special 3-character tokens (dhi, gji, nji)
-- Smart word validation using the Fjalorthi Albanian dictionary API
-- Fallback validation for conjugated forms
-- Over 200 carefully curated 5-character Albanian words
-
-### 📊 Statistics & Progress
-- Track your performance with detailed statistics
-- Current and longest win streaks
-- Win distribution histogram
-- Play count and win percentage
-- Stats persist in localStorage
-
-### 🎨 User Experience
-- **Dark hacker-green theme** with cyberpunk aesthetics
-- Fully responsive design (mobile-first)
-- Smooth animations and transitions
-- Accessibility features:
-  - Reduced motion mode for users sensitive to animations
-  - High contrast mode for better visibility
-  - Keyboard navigation support
-- Color-coded feedback (green = correct, yellow = wrong position, gray = not in word)
-- Real-time keyboard state tracking
-- Error messages for invalid guesses and hard mode violations
-
-### ⚡ Performance & Quality
-- Fast React 19 with TypeScript 6
-- Vite 8 for lightning-fast builds
-- Comprehensive test coverage (47+ tests)
-- LocalStorage caching for API responses
-- Optimized rendering with memoization
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 16+ and npm
-
-### Installation
+Requires Node.js 22 or later.
 
 ```bash
-# Clone the repository
-git clone https://github.com/EzanNebiu/fjaleza.git
-cd fjaleza
-
-# Install dependencies
 npm install
-
-# Start development server
-npm run dev
-
-# Open http://localhost:5173 in your browser
+npm run dev        # http://localhost:5173
+npm test           # unit tests (evaluation, daily word, storage, share, word lists)
+npm run lint
+npm run build      # production build in dist/
+npm run preview    # serve dist/ on http://localhost:4173
 ```
 
-### Build for Production
+`dev`, `build` and `test` first run `scripts/compile-words.mjs`, which validates the word lists and generates `src/data/generated/`. That folder is git-ignored, so don't edit it by hand.
 
-```bash
-# Build the project
-npm run build
+## Game rules
 
-# Preview production build
-npm run preview
+- A word is exactly **5 characters**. `Ë` and `Ç` are single letters, distinct from `E` and `C`. Digraphs such as `SH`, `GJ` and `DH` take two tiles, one per character.
+- The daily word changes at **local midnight**. Everyone on the same calendar date gets the same word.
+- Puzzle #1 is 22 November 2026 (`EPOCH` in `src/game/constants.ts`). Don't change it once the game is live.
+- Practice mode picks random answers and doesn't count toward statistics.
+- Hard mode: green letters must stay in place and yellow letters must be reused. It locks after the first guess of the day.
+
+## Word lists
+
+| File | What it is |
+| --- | --- |
+| `words/answers.txt` | Daily answer schedule. Line N is puzzle N; the list wraps around after the last line. |
+| `words/guesses.txt` | Every accepted guess. |
+| `words/needs-review.json` | Words kept out of the answers until a person checks them. |
+| `words/review-decisions.json` | Your decisions: `approve` promotes a word to the answers, `reject` keeps it out (with a reason). |
+| `words/REPORT.md` | Latest audit report. |
+
+The lists are built from two open sources, which `scripts/build-word-lists.mjs` downloads into `scripts/.cache/`:
+
+- **Hunspell sq_AL** by Luan Kelmendi (LibreOffice dictionaries, GPL-2.0-or-later): is the word real, correctly spelled, and not a proper noun?
+- **FrequencyWords sq 2018** by Hermit Dave (OpenSubtitles, CC-BY-SA-4.0): is the word common in everyday speech?
+
+An answer must be in the dictionary, appear at least 100 times in the frequency list, and not be a function word, a sensitive word or an offensive word (`scripts/lib/exclusions.mjs`). A guess only needs to be a 5-character dictionary form.
+
+### Updating the list
+
+1. Edit `words/review-decisions.json`: add words to `approve`, or add `"word": "reason"` to `reject`.
+2. Run `npm run words:build`. This rebuilds the lists and `REPORT.md`. Existing answers keep their positions, new answers go at the end, and removed answers are reported.
+3. Run `npm test` and commit the `words/` changes.
+
+Removing an answer that's already scheduled shifts every later puzzle by one day. Prefer rejecting words before they go live.
+
+Licensing note: `guesses.txt` is derived from the GPL-licensed Hunspell dictionary. Keep it under a GPL-compatible license and keep the attribution on the About page.
+
+## Ads, consent and analytics
+
+Everything is configured in `src/config/monetization.ts`. Nothing third-party loads unless it's enabled there **and** the visitor consents.
+
+### Switching on Google AdSense
+
+1. Deploy the site and apply at <https://adsense.google.com>. AdSense reviews the live site, including the About and Privacy pages.
+2. Paste your publisher ID into `ads.publisherId` (for example `ca-pub-1234567890123456`).
+3. Create one display ad unit per placement and paste each slot ID:
+   - `banner` 320×50, under the header on phones and tablets (only on screens at least 700px tall)
+   - `endOfGame` 300×250, in the results dialog after the game is over
+   - `sidebar` 160×600, right-hand column on screens 1200px and wider
+4. Set `ads.enabled: true`, then rebuild and deploy. `ads.txt` and the Content-Security-Policy are generated from this config automatically.
+
+Ads never cover the board or keyboard, never appear during guessing on top of play, and there are no pop-ups, interstitials or autoplay video. Each slot reserves its exact size, so there's no layout shift.
+
+**EU/UK traffic:** Google requires a Google-certified consent management platform (CMP) that supports IAB TCF v2.2 to serve ads to visitors in the EEA, the UK and Switzerland. The built-in banner gates every script correctly, but it isn't TCF-certified. Before you rely on ad revenue from Europe, turn on Google's own CMP (AdSense, then Privacy & messaging, then European regulations message) or use another certified CMP, and replace or complement `src/components/ConsentBanner.tsx`.
+
+### Analytics
+
+Set `analytics.provider` to `goatcounter`, `cloudflare` or `plausible` and fill in its code, token or domain. All three are cookieless. The script loads only after analytics consent.
+
+### Ad-free upgrade (optional, not functional)
+
+`adFree` in the config and `src/monetization/adFree.ts` hold the structure for a one-time "remove ads" purchase. There's no payment logic; see the comments in that file before enabling it.
+
+## Deploy
+
+### Netlify
+
+1. Create a site from this repository. `netlify.toml` already sets the build command (`npm run build`), the publish folder (`dist`) and Node 22.
+2. Netlify passes its site address to the build as `URL`, which becomes the canonical URL, the Open Graph URLs, the sitemap and the share link. If you use a custom domain, set `SITE_URL` (for example `https://fjaleza.al`) under Site configuration, then Environment variables.
+3. Security headers (CSP, HSTS, X-Frame-Options and others) and caching rules come from the generated `dist/_headers`.
+
+### Cloudflare Pages
+
+Build command `npm run build`, output directory `dist`, and set the environment variable `SITE_URL` to your production address. Cloudflare Pages reads the same `_headers` file and serves `404.html` for unknown paths.
+
+## Project layout
+
+```
+scripts/            word list build and validation, icon and OG image generation
+words/              word lists, review file and report
+src/game/           pure game logic with tests (evaluate, daily, storage, share, words)
+src/hooks/          React state: game, settings, keyboard input, toasts
+src/components/     UI: board, keyboard, dialogs, consent banner, ad slot
+src/monetization/   consent store, AdSense and analytics loaders, ad-free scaffold
+src/config/         monetization.ts, the one file to edit for ads and analytics
+rreth/, privatesia/ About and Privacy pages
+public/             manifest, icons, OG image, theme script, 404 page
 ```
 
-### Deploy to Vercel
+To regenerate the icons and the Open Graph image after a design change, run `npm run assets`.
 
-```bash
+## License
 
-### Run Tests
-
-```bash
-# Run tests in watch mode
-npm test
-
-# Run tests with UI
-npm run test:ui
-
-# Run tests once
-npm run test -- --run
-```
-
-## 🏗️ Tech Stack
-
-### Frontend
-- **React 19** - Modern UI library with concurrent features
-- **TypeScript 6** - Type-safe JavaScript
-- **Vite 8** - Next-generation frontend tooling
-- **Tailwind CSS v3** - Utility-first CSS framework
-
-### Testing
-- **Vitest** - Fast unit test framework
-- **React Testing Library** - Testing utilities for React
-- **@testing-library/user-event** - User interaction simulation
-
-### Development
-- **ESLint** - Code linting
-- **TypeScript ESLint** - TypeScript-specific linting rules
-- **lucide-react** - Beautiful icon library
-
-## 📁 Project Structure
-
-```
-fjaleza/
-├── src/
-│   ├── components/        # React components
-│   │   ├── Game.tsx       # Main game orchestrator
-│   │   ├── Grid.tsx       # Word grid display
-│   │   ├── Keyboard.tsx   # Virtual keyboard
-│   │   ├── Header.tsx     # App header with controls
-│   │   ├── Modal.tsx      # Reusable modal component
-│   │   ├── GameOverModal.tsx
-│   │   └── ...
-│   ├── contexts/          # React contexts
-│   │   └── AppContext.tsx # Global app state
-│   ├── core/              # Core game logic
-│   │   ├── albanianTokenizer.ts  # Albanian text tokenization
-│   │   └── gameEngine.ts         # Game rules & validation
-│   ├── data/              # Game data
-│   │   ├── words.ts       # Albanian word lists
-│   │   └── wordRepository.ts
-│   ├── hooks/             # Custom React hooks
-│   │   ├── useGameState.ts
-│   │   ├── useInputManager.ts
-│   │   └── useKeyboard.ts
-│   ├── services/          # External services
-│   │   └── fjalorthi/     # Fjalorthi API integration
-│   ├── utils/             # Utility functions
-│   │   ├── storage.ts     # localStorage helpers
-│   │   └── wordValidation.ts
-│   ├── types/             # TypeScript type definitions
-│   ├── App.tsx            # Root component
-│   └── main.tsx           # Entry point
-├── public/                # Static assets
-├── tests/                 # Test files
-└── package.json
-```
-
-## 🧪 Testing
-
-The project includes comprehensive test coverage:
-
-- **26 tests** for Albanian tokenizer (edge cases, digraphs, special characters)
-- **21 tests** for game engine (guess evaluation, win/loss conditions, hard mode)
-- **Integration tests** for component interactions
-
-Run tests with:
-```bash
-npm test
-```
-
-## 🎯 How to Play
-
-1. **Guess the word**: Enter a 5-letter Albanian word
-2. **Get feedback**: 
-   - 🟩 Green = Letter is correct and in the right position
-   - 🟨 Yellow = Letter is in the word but wrong position
-   - ⬜ Gray = Letter is not in the word
-3. **Win or lose**: You have 6 attempts to guess the word
-4. **Daily puzzle**: Come back every day for a new word!
-5. **Practice mode**: Play unlimited games to improve your Albanian vocabulary
-
-## 🌐 Albanian Language Features
-
-Fjalëza intelligently handles Albanian special characters and digraphs:
-
-- **Digraphs** (2 characters counted as 1): dh, gj, ll, nj, rr, sh, th, xh, zh
-- **Special characters**: ç, ë
-- **3-character tokens** (special cases): dhi, gji, nji
-- **Example**: "GJUHA" = 5 characters (GJ-U-H-A)
-
-## 🔧 Configuration
-
-### Word Validation
-The app uses the [Fjalorthi API](https://fjalorthi.com/) for Albanian word validation with:
-- 30-day caching to reduce API calls
-- Fallback to local word list for conjugated forms
-- Request timeout of 10 seconds
-
-### Game Settings
-- Max guesses: 6
-- Word length: 5 characters
-- Daily puzzle timezone: Europe/Belgrade
-
-## 👥 Team
-
-**Made by ELITA Group:**
-- **[Ezan Nebija](https://ezannebija.dev/)** - Lead Developer
-- **Edi Nebiu** - Developer
-- **Redon Cikaj** - Developer
-- **Anila Kadriaj** - Developer
-- **Rina Gashi** - Developer
-
-## 📄 License
-
-MIT License - feel free to use this project for learning or building your own word puzzle games!
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Submit pull requests
-- Improve documentation
-
-## 🙏 Acknowledgments
-
-- Word validation powered by [Fjalorthi](https://fjalorthi.com/) - Albanian dictionary API
-- Inspired by [Wordle](https://www.nytimes.com/games/wordle/index.html)
-- Icons by [Lucide](https://lucide.dev/)
-
----
-
-**Fjalëza** - Mëso shqip duke u argëtuar! Learn Albanian while having fun! 🇦🇱
+MIT for the code. The word lists are derived from the sources above and keep their licenses.

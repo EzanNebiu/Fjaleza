@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "Fjalëza: loja ditore e fjalëve shqipe",
+  "short_name": "Fjalëza",
+  "description": "Gjej fjalën shqipe me 5 shkronja në 6 përpjekje. Një fjalë e re çdo ditë.",
+  "lang": "sq",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5efe4",
+  "theme_color": "#f5efe4",
+  "categories": ["games", "education"],
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

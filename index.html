@@ -1,31 +1,64 @@
 <!doctype html>
-<html lang="sq">
+<html lang="sq" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Fjalëza - Albanian Word Puzzle Game</title>
-    <meta name="title" content="Fjalëza - Albanian Word Puzzle Game" />
-    <meta name="description" content="Daily Albanian word puzzle game. Guess the 5-letter Albanian word in 6 attempts. Learn Albanian while having fun!" />
-    <meta name="keywords" content="Albanian, word game, puzzle, Wordle, Shqip, fjalë, lojë" />
-    
-    <!-- Open Graph / Facebook -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Fjalëza: loja ditore e fjalëve shqipe</title>
+    <meta
+      name="description"
+      content="Gjej fjalën shqipe me 5 shkronja në 6 përpjekje. Një fjalë e re çdo ditë, falas, pa llogari, edhe pa internet."
+    />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+    <meta name="theme-color" content="#f5efe4" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14110e" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-title" content="Fjalëza" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Fjalëza - Albanian Word Puzzle Game" />
-    <meta property="og:description" content="Daily Albanian word puzzle game. Guess the 5-letter Albanian word in 6 attempts." />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Fjalëza - Albanian Word Puzzle Game" />
-    <meta property="twitter:description" content="Daily Albanian word puzzle game. Guess the 5-letter Albanian word in 6 attempts." />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#00ff41" />
+    <meta property="og:site_name" content="Fjalëza" />
+    <meta property="og:locale" content="sq_AL" />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:title" content="Fjalëza: loja ditore e fjalëve shqipe" />
+    <meta property="og:description" content="Gjej fjalën shqipe me 5 shkronja në 6 përpjekje. Një fjalë e re çdo ditë." />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fjalëza: kuti me shkronja në ngjyrë të gjelbër dhe të verdhë" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fjalëza: loja ditore e fjalëve shqipe" />
+    <meta name="twitter:description" content="Gjej fjalën shqipe me 5 shkronja në 6 përpjekje. Një fjalë e re çdo ditë." />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Fjalëza",
+        "url": "%VITE_SITE_URL%/",
+        "description": "Loja ditore e fjalëve shqipe: gjej fjalën me 5 shkronja në 6 përpjekje.",
+        "inLanguage": "sq",
+        "applicationCategory": "GameApplication",
+        "genre": "Word game",
+        "operatingSystem": "Any",
+        "isAccessibleForFree": true,
+        "image": "%VITE_SITE_URL%/og-image.png",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "creator": { "@type": "Organization", "name": "ELITA Group" }
+      }
+    </script>
+    <script src="/theme-init.js"></script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; text-align: center">Fjalëza ka nevojë për JavaScript për t'u luajtur.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
